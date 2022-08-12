@@ -1,0 +1,146 @@
+[0.006s] Invoking command in '/home/longarmape06/ifv_ws/build/ifv_pkg': AMENT_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib PYTHONPATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/longarmape06/ifv_ws/src/ifv_pkg -DCMAKE_INSTALL_PREFIX=/home/longarmape06/ifv_ws/install/ifv_pkg
+[0.044s] -- The C compiler identification is GNU 11.2.0
+[0.081s] -- The CXX compiler identification is GNU 11.2.0
+[0.087s] -- Detecting C compiler ABI info
+[0.132s] -- Detecting C compiler ABI info - done
+[0.137s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.137s] -- Detecting C compile features
+[0.137s] -- Detecting C compile features - done
+[0.139s] -- Detecting CXX compiler ABI info
+[0.189s] -- Detecting CXX compiler ABI info - done
+[0.200s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.200s] -- Detecting CXX compile features
+[0.200s] -- Detecting CXX compile features - done
+[0.203s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.330s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.4") found components: Interpreter 
+[0.403s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[0.449s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.452s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.458s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.467s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.480s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.534s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.536s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.601s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.620s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.652s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.776s] -- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.875s] -- Found gazebo_dev: 3.7.0 (/opt/ros/humble/share/gazebo_dev/cmake)
+[0.880s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[0.881s] -- Checking for module 'bullet>=2.82'
+[0.887s] --   Found bullet, version 3.05
+[0.946s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[0.971s] -- Found assimp: /usr/include (found version "5.2.0") 
+[0.988s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.104s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[1.118s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[1.121s] -- Looking for ignition-math6 -- found version 6.12.0
+[1.128s] -- Searching for dependencies of ignition-math6
+[1.129s] -- Looking for OGRE...
+[1.129s] -- OGRE_PREFIX_WATCH changed.
+[1.133s] -- Checking for module 'OGRE'
+[1.139s] --   Found OGRE, version 1.9.0
+[1.154s] -- Found Ogre Ghadamon (1.9.0)
+[1.159s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.166s] -- Looking for OGRE_Paging...
+[1.169s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.169s] -- Looking for OGRE_Terrain...
+[1.172s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.172s] -- Looking for OGRE_Property...
+[1.175s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.176s] -- Looking for OGRE_RTShaderSystem...
+[1.179s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.179s] -- Looking for OGRE_Volume...
+[1.182s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.182s] -- Looking for OGRE_Overlay...
+[1.185s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[1.255s] -- Looking for ignition-math6 -- found version 6.12.0
+[1.257s] -- Looking for ignition-transport8 -- found version 8.2.1
+[1.257s] -- Searching for dependencies of ignition-transport8
+[1.269s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[1.276s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.278s] -- Checking for module 'libzmq >= 4'
+[1.286s] --   Found libzmq , version 4.3.4
+[1.303s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[1.307s] -- Checking for module 'uuid'
+[1.313s] --   Found uuid, version 2.37.2
+[1.329s] -- Found UUID: TRUE  
+[1.330s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.331s] -- Searching for dependencies of ignition-msgs5
+[1.342s] -- Looking for ignition-math6 -- found version 6.12.0
+[1.345s] -- Checking for module 'tinyxml2'
+[1.352s] --   Found tinyxml2, version 9.0.0
+[1.368s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.369s] -- Looking for ignition-common3 -- found version 3.14.0
+[1.370s] -- Searching for dependencies of ignition-common3
+[1.370s] -- Looking for dlfcn.h - found
+[1.371s] -- Looking for libdl - found
+[1.372s] -- Found DL: TRUE  
+[1.378s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[1.379s] -- Searching for <ignition-common3> component [graphics]
+[1.380s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[1.381s] -- Searching for dependencies of ignition-common3-graphics
+[1.381s] -- Looking for ignition-math6 -- found version 6.12.0
+[1.383s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[1.383s] -- Searching for dependencies of ignition-fuel_tools4
+[1.423s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[1.430s] -- Checking for module 'jsoncpp'
+[1.436s] --   Found jsoncpp, version 1.9.5
+[1.452s] -- Found JSONCPP: TRUE  
+[1.456s] -- Checking for module 'libzip'
+[1.461s] --   Found libzip, version 1.7.3
+[1.477s] -- Found ZIP: TRUE  
+[1.477s] -- Looking for ignition-common3 -- found version 3.14.0
+[1.477s] -- Looking for ignition-math6 -- found version 6.12.0
+[1.477s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.480s] -- Gazebo version: 11.10
+[1.480s] -- Checking for module 'tbb'
+[1.486s] --   Found tbb, version 2021.7.0
+[1.501s] -- Found ifv_interfaces: 0.0.0 (/home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake)
+[1.512s] -- Found gazebo_ros: 3.7.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[1.518s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.589s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.590s] -- Configured cppcheck include dirs: /home/longarmape06/ifv_ws/src/ifv_pkg/include
+[1.590s] -- Configured cppcheck exclude dirs and/or files: 
+[1.590s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.590s] -- Added test 'lint_cmake' to check CMake code style
+[1.591s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.591s] -- Added test 'uncrustify' to check C / C++ code style
+[1.591s] -- Configured uncrustify additional arguments: 
+[1.592s] -- Added test 'xmllint' to check XML markup files
+[1.592s] -- Configuring done
+[1.624s] -- Generating done
+[1.626s] -- Build files have been written to: /home/longarmape06/ifv_ws/build/ifv_pkg
+[1.635s] Invoked command in '/home/longarmape06/ifv_ws/build/ifv_pkg' returned '0': AMENT_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib PYTHONPATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/longarmape06/ifv_ws/src/ifv_pkg -DCMAKE_INSTALL_PREFIX=/home/longarmape06/ifv_ws/install/ifv_pkg
+[1.637s] Invoking command in '/home/longarmape06/ifv_ws/build/ifv_pkg': AMENT_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib PYTHONPATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/longarmape06/ifv_ws/build/ifv_pkg -- -j16 -l16
+[1.668s] [ 25%] [32mBuilding CXX object CMakeFiles/ifv_listener.dir/src/sub_joint.cpp.o[0m
+[1.669s] [ 50%] [32mBuilding CXX object CMakeFiles/applytorque.dir/src/gazebo_ros_8doftorque.cpp.o[0m
+[8.437s] [ 75%] [32m[1mLinking CXX executable ifv_listener[0m
+[8.786s] [ 75%] Built target ifv_listener
+[14.600s] [100%] [32m[1mLinking CXX shared library libapplytorque.so[0m
+[15.093s] [100%] Built target applytorque
+[15.099s] Invoked command in '/home/longarmape06/ifv_ws/build/ifv_pkg' returned '0': AMENT_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib PYTHONPATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/longarmape06/ifv_ws/build/ifv_pkg -- -j16 -l16
+[15.115s] Invoking command in '/home/longarmape06/ifv_ws/build/ifv_pkg': AMENT_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib PYTHONPATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/longarmape06/ifv_ws/build/ifv_pkg
+[15.119s] -- Install configuration: ""
+[15.119s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/lib/ifv_pkg/ifv_listener
+[15.121s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_pkg/lib/ifv_pkg/ifv_listener" to ""
+[15.121s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/launch
+[15.121s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/launch/mylaunch.py
+[15.121s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/world
+[15.121s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/world/IFVsim.world
+[15.121s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ament_index/resource_index/package_run_dependencies/ifv_pkg
+[15.121s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ament_index/resource_index/parent_prefix_path/ifv_pkg
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/ament_prefix_path.sh
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/ament_prefix_path.dsv
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/path.sh
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/path.dsv
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.bash
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.sh
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.zsh
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.dsv
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/package.dsv
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ament_index/resource_index/packages/ifv_pkg
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/cmake/ifv_pkgConfig.cmake
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/cmake/ifv_pkgConfig-version.cmake
+[15.122s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/package.xml
+[15.123s] Invoked command in '/home/longarmape06/ifv_ws/build/ifv_pkg' returned '0': AMENT_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib PYTHONPATH=/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/longarmape06/ifv_ws/build/ifv_pkg

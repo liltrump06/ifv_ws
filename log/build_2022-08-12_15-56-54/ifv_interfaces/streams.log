@@ -1,0 +1,221 @@
+[0.009s] Invoking command in '/home/longarmape06/ifv_ws/build/ifv_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/longarmape06/ifv_ws/src/ifv_interfaces -DCMAKE_INSTALL_PREFIX=/home/longarmape06/ifv_ws/install/ifv_interfaces
+[0.073s] -- The C compiler identification is GNU 11.2.0
+[0.126s] -- The CXX compiler identification is GNU 11.2.0
+[0.133s] -- Detecting C compiler ABI info
+[0.180s] -- Detecting C compiler ABI info - done
+[0.186s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.186s] -- Detecting C compile features
+[0.187s] -- Detecting C compile features - done
+[0.189s] -- Detecting CXX compiler ABI info
+[0.242s] -- Detecting CXX compiler ABI info - done
+[0.248s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.248s] -- Detecting CXX compile features
+[0.248s] -- Detecting CXX compile features - done
+[0.253s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.382s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.4") found components: Interpreter 
+[0.457s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.461s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.468s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.514s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.733s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.870s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.052s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.071s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.4", minimum required is "3.6") 
+[1.073s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.095s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.4", minimum required is "3.5") 
+[1.095s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.095s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.095s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.111s] -- Found PythonExtra: .so  
+[1.138s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.155s] -- Added test 'lint_cmake' to check CMake code style
+[1.156s] -- Added test 'xmllint' to check XML markup files
+[1.158s] -- Configuring done
+[1.175s] -- Generating done
+[1.177s] -- Build files have been written to: /home/longarmape06/ifv_ws/build/ifv_interfaces
+[1.182s] Invoked command in '/home/longarmape06/ifv_ws/build/ifv_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/longarmape06/ifv_ws/src/ifv_interfaces -DCMAKE_INSTALL_PREFIX=/home/longarmape06/ifv_ws/install/ifv_interfaces
+[1.183s] Invoking command in '/home/longarmape06/ifv_ws/build/ifv_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/longarmape06/ifv_ws/build/ifv_interfaces -- -j16 -l16
+[1.210s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.216s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.222s] [  6%] Built target ament_cmake_python_copy_ifv_interfaces
+[1.399s] [  6%] Built target ifv_interfaces__cpp
+[1.399s] [  9%] [32mBuilding C object CMakeFiles/ifv_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ifv_interfaces/msg/detail/torque8dof__functions.c.o[0m
+[1.400s] running egg_info
+[1.401s] creating ifv_interfaces.egg-info
+[1.401s] writing ifv_interfaces.egg-info/PKG-INFO
+[1.401s] writing dependency_links to ifv_interfaces.egg-info/dependency_links.txt
+[1.402s] writing top-level names to ifv_interfaces.egg-info/top_level.txt
+[1.402s] writing manifest file 'ifv_interfaces.egg-info/SOURCES.txt'
+[1.404s] reading manifest file 'ifv_interfaces.egg-info/SOURCES.txt'
+[1.404s] writing manifest file 'ifv_interfaces.egg-info/SOURCES.txt'
+[1.405s] [ 19%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.405s] [ 19%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.405s] [ 19%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.428s] [ 19%] Built target ament_cmake_python_build_ifv_interfaces_egg
+[1.437s] [ 22%] [32m[1mLinking C shared library libifv_interfaces__rosidl_generator_c.so[0m
+[1.460s] [ 22%] Built target ifv_interfaces__rosidl_generator_c
+[1.467s] [ 32%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.467s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.467s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.567s] [ 35%] [32mBuilding CXX object CMakeFiles/ifv_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ifv_interfaces/msg/torque8dof__type_support.cpp.o[0m
+[1.578s] [ 38%] [32mBuilding CXX object CMakeFiles/ifv_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ifv_interfaces/msg/detail/torque8dof__type_support.cpp.o[0m
+[1.590s] [ 41%] [32mBuilding CXX object CMakeFiles/ifv_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ifv_interfaces/msg/detail/dds_fastrtps/torque8dof__type_support.cpp.o[0m
+[1.635s] [ 45%] [32mBuilding CXX object CMakeFiles/ifv_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ifv_interfaces/msg/torque8dof__type_support.cpp.o[0m
+[1.647s] [ 48%] [32mBuilding CXX object CMakeFiles/ifv_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ifv_interfaces/msg/detail/torque8dof__type_support_c.cpp.o[0m
+[1.655s] [ 54%] [32mBuilding C object CMakeFiles/ifv_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ifv_interfaces/msg/detail/torque8dof__type_support.c.o[0m
+[1.655s] [ 54%] [32m[1mLinking CXX shared library libifv_interfaces__rosidl_typesupport_c.so[0m
+[1.676s] [ 58%] [32m[1mLinking C shared library libifv_interfaces__rosidl_typesupport_introspection_c.so[0m
+[1.681s] [ 58%] Built target ifv_interfaces__rosidl_typesupport_c
+[1.694s] [ 58%] Built target ifv_interfaces__rosidl_typesupport_introspection_c
+[1.760s] [ 61%] [32m[1mLinking CXX shared library libifv_interfaces__rosidl_typesupport_cpp.so[0m
+[1.794s] [ 61%] Built target ifv_interfaces__rosidl_typesupport_cpp
+[1.849s] [ 64%] [32m[1mLinking CXX shared library libifv_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[1.874s] [ 64%] Built target ifv_interfaces__rosidl_typesupport_introspection_cpp
+[1.879s] [ 67%] [32m[1mLinking CXX shared library libifv_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[1.880s] [ 70%] [32m[1mLinking CXX shared library libifv_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.932s] [ 70%] Built target ifv_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.933s] [ 70%] Built target ifv_interfaces__rosidl_typesupport_fastrtps_c
+[1.942s] [ 70%] Built target ifv_interfaces
+[1.953s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.237s] [ 74%] Built target ifv_interfaces__py
+[2.250s] [ 77%] [32mBuilding C object CMakeFiles/ifv_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ifv_interfaces/msg/_torque8dof_s.c.o[0m
+[2.338s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/ifv_interfaces/libifv_interfaces__rosidl_generator_py.so[0m
+[2.370s] [ 80%] Built target ifv_interfaces__rosidl_generator_py
+[2.382s] [ 87%] [32mBuilding C object CMakeFiles/ifv_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.382s] [ 87%] [32mBuilding C object CMakeFiles/ifv_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[2.382s] [ 90%] [32mBuilding C object CMakeFiles/ifv_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.441s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.442s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.445s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.462s] [100%] Built target ifv_interfaces__rosidl_typesupport_c__pyext
+[2.463s] [100%] Built target ifv_interfaces__rosidl_typesupport_introspection_c__pyext
+[2.466s] [100%] Built target ifv_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.475s] Invoked command in '/home/longarmape06/ifv_ws/build/ifv_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/longarmape06/ifv_ws/build/ifv_interfaces -- -j16 -l16
+[2.511s] Invoking command in '/home/longarmape06/ifv_ws/build/ifv_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/longarmape06/ifv_ws/build/ifv_interfaces
+[2.516s] -- Install configuration: ""
+[2.516s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/rosidl_interfaces/ifv_interfaces
+[2.516s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces
+[2.516s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg
+[2.516s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail
+[2.516s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__functions.h
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__functions.c
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__struct.h
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__type_support.h
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_generator_c__visibility_control.h
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/torque8dof.h
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/library_path.sh
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/library_path.dsv
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_generator_c.so
+[2.517s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces
+[2.517s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg
+[2.517s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_fastrtps_c.h
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.517s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.517s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[2.517s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces
+[2.518s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg
+[2.518s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__type_support.c
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_introspection_c.h
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_introspection_c.so
+[2.518s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_c.so
+[2.518s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_c.so" to ""
+[2.518s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces
+[2.518s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg
+[2.518s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__builder.hpp
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__traits.hpp
+[2.518s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__struct.hpp
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/torque8dof.hpp
+[2.519s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces
+[2.519s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg
+[2.519s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_fastrtps_cpp.hpp
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/dds_fastrtps
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.519s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces
+[2.519s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg
+[2.519s] -- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_introspection_cpp.hpp
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__type_support.cpp
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_cpp.so
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/pythonpath.sh
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/pythonpath.dsv
+[2.519s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/_torque8dof_s.c
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/__init__.py
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/_torque8dof.py
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/__init__.py
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_c.c
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.520s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/libifv_interfaces__rosidl_generator_py.so
+[2.542s] Listing '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces'...
+[2.542s] Compiling '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/__init__.py'...
+[2.542s] Listing '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg'...
+[2.542s] Compiling '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/__init__.py'...
+[2.542s] Compiling '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/_torque8dof.py'...
+[2.546s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.546s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.546s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.546s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.546s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.547s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.547s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_generator_py.so
+[2.547s] -- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_generator_py.so" to ""
+[2.547s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/msg/Torque8dof.idl
+[2.547s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/msg/Torque8dof.msg
+[2.547s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/package_run_dependencies/ifv_interfaces
+[2.547s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/parent_prefix_path/ifv_interfaces
+[2.547s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/ament_prefix_path.sh
+[2.547s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/ament_prefix_path.dsv
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/path.sh
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/path.dsv
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.bash
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.sh
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.zsh
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.dsv
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/package.dsv
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/packages/ifv_interfaces
+[2.548s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_cExport.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_cExport-noconfig.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cExport.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_cppExport.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.549s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cppExport.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_pyExport.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/rosidl_cmake-extras.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.550s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.551s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.551s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfacesConfig.cmake
+[2.551s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfacesConfig-version.cmake
+[2.551s] -- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/package.xml
+[2.553s] Invoked command in '/home/longarmape06/ifv_ws/build/ifv_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/longarmape06/ifv_ws/build/ifv_interfaces

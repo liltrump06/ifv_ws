@@ -1,0 +1,467 @@
+[0.000000] (-) TimerEvent: {}
+[0.000774] (ifv_interfaces) JobQueued: {'identifier': 'ifv_interfaces', 'dependencies': OrderedDict()}
+[0.000840] (ifv_pkg) JobQueued: {'identifier': 'ifv_pkg', 'dependencies': OrderedDict([('ifv_interfaces', '/home/longarmape06/ifv_ws/install/ifv_interfaces')])}
+[0.000867] (ifv_interfaces) JobStarted: {'identifier': 'ifv_interfaces'}
+[0.006048] (ifv_interfaces) JobProgress: {'identifier': 'ifv_interfaces', 'progress': 'cmake'}
+[0.006448] (ifv_interfaces) JobProgress: {'identifier': 'ifv_interfaces', 'progress': 'build'}
+[0.007016] (ifv_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/longarmape06/ifv_ws/build/ifv_interfaces', '--', '-j16', '-l16'], 'cwd': '/home/longarmape06/ifv_ws/build/ifv_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', ':/opt/ros/humble/lib:/opt/ros/humble/lib'), ('C_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('USER', 'longarmape06'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu::/opt/ros/humble/lib:/opt/ros/humble/lib'), ('HOME', '/home/longarmape06'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/longarmape06/ifv_ws/src'), ('TERM_PROGRAM_VERSION', '1.70.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '999'), ('SYSTEMD_EXEC_PID', '1729'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '10094'), ('CPLUS_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'longarmape06'), ('JOURNAL_STREAM', '8:39121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'longarmape06'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/longarmape06-Lenovo-Legion-R9000P2021H:@/tmp/.ICE-unix/1694,unix/longarmape06-Lenovo-Legion-R9000P2021H:/tmp/.ICE-unix/1694'), ('INVOCATION_ID', '4dae6625382c4226a4bf0da48fdf19ce'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-38f5680c33.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/longarmape06/ifv_ws/build/ifv_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.035193] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_generator_c\x1b[0m\n'}
+[0.040531] (ifv_interfaces) StdoutLine: {'line': b'[  3%] Built target ifv_interfaces__cpp\n'}
+[0.041026] (ifv_interfaces) StdoutLine: {'line': b'[ 12%] Built target ifv_interfaces__rosidl_generator_c\n'}
+[0.045928] (ifv_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_ifv_interfaces\n'}
+[0.046179] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[0.046302] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.046559] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.051715] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[0.051919] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[0.051996] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[0.053698] (ifv_interfaces) StdoutLine: {'line': b'[ 22%] Built target ifv_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.053899] (ifv_interfaces) StdoutLine: {'line': b'[ 32%] Built target ifv_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.054037] (ifv_interfaces) StdoutLine: {'line': b'[ 41%] Built target ifv_interfaces__rosidl_typesupport_cpp\n'}
+[0.058088] (ifv_interfaces) StdoutLine: {'line': b'[ 61%] Built target ifv_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.058264] (ifv_interfaces) StdoutLine: {'line': b'[ 61%] Built target ifv_interfaces__rosidl_typesupport_c\n'}
+[0.058352] (ifv_interfaces) StdoutLine: {'line': b'[ 70%] Built target ifv_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.069369] (ifv_interfaces) StdoutLine: {'line': b'[ 70%] Built target ifv_interfaces\n'}
+[0.080421] (ifv_interfaces) StdoutLine: {'line': b'[ 74%] Built target ifv_interfaces__py\n'}
+[0.086121] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_generator_py\x1b[0m\n'}
+[0.093589] (ifv_interfaces) StdoutLine: {'line': b'[ 80%] Built target ifv_interfaces__rosidl_generator_py\n'}
+[0.098582] (-) TimerEvent: {}
+[0.099611] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[0.099745] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[0.099811] (ifv_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ifv_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[0.107863] (ifv_interfaces) StdoutLine: {'line': b'[100%] Built target ifv_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.108030] (ifv_interfaces) StdoutLine: {'line': b'[100%] Built target ifv_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.108122] (ifv_interfaces) StdoutLine: {'line': b'[100%] Built target ifv_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.198699] (-) TimerEvent: {}
+[0.222996] (ifv_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.223487] (ifv_interfaces) StdoutLine: {'line': b'writing ifv_interfaces.egg-info/PKG-INFO\n'}
+[0.223622] (ifv_interfaces) StdoutLine: {'line': b'writing dependency_links to ifv_interfaces.egg-info/dependency_links.txt\n'}
+[0.223733] (ifv_interfaces) StdoutLine: {'line': b'writing top-level names to ifv_interfaces.egg-info/top_level.txt\n'}
+[0.225007] (ifv_interfaces) StdoutLine: {'line': b"reading manifest file 'ifv_interfaces.egg-info/SOURCES.txt'\n"}
+[0.225364] (ifv_interfaces) StdoutLine: {'line': b"writing manifest file 'ifv_interfaces.egg-info/SOURCES.txt'\n"}
+[0.243152] (ifv_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_ifv_interfaces_egg\n'}
+[0.249035] (ifv_interfaces) CommandEnded: {'returncode': 0}
+[0.279380] (ifv_interfaces) JobProgress: {'identifier': 'ifv_interfaces', 'progress': 'install'}
+[0.285774] (ifv_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/longarmape06/ifv_ws/build/ifv_interfaces'], 'cwd': '/home/longarmape06/ifv_ws/build/ifv_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', ':/opt/ros/humble/lib:/opt/ros/humble/lib'), ('C_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('USER', 'longarmape06'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu::/opt/ros/humble/lib:/opt/ros/humble/lib'), ('HOME', '/home/longarmape06'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/longarmape06/ifv_ws/src'), ('TERM_PROGRAM_VERSION', '1.70.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '999'), ('SYSTEMD_EXEC_PID', '1729'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '10094'), ('CPLUS_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'longarmape06'), ('JOURNAL_STREAM', '8:39121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'longarmape06'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/longarmape06-Lenovo-Legion-R9000P2021H:@/tmp/.ICE-unix/1694,unix/longarmape06-Lenovo-Legion-R9000P2021H:/tmp/.ICE-unix/1694'), ('INVOCATION_ID', '4dae6625382c4226a4bf0da48fdf19ce'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-38f5680c33.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/longarmape06/ifv_ws/build/ifv_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.290233] (ifv_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.290408] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/rosidl_interfaces/ifv_interfaces\n'}
+[0.290596] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces\n'}
+[0.290723] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg\n'}
+[0.290825] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail\n'}
+[0.290983] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__functions.h\n'}
+[0.291063] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__functions.c\n'}
+[0.291164] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__struct.h\n'}
+[0.291342] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__type_support.h\n'}
+[0.291457] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.291565] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/torque8dof.h\n'}
+[0.291646] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/library_path.sh\n'}
+[0.291792] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/library_path.dsv\n'}
+[0.291872] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_generator_c.so\n'}
+[0.291997] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces\n'}
+[0.292091] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg\n'}
+[0.292172] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail\n'}
+[0.292251] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_fastrtps_c.h\n'}
+[0.292392] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.292462] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.292557] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces\n'}
+[0.292618] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg\n'}
+[0.292682] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail\n'}
+[0.292736] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__type_support.c\n'}
+[0.292790] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_introspection_c.h\n'}
+[0.292844] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.292898] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.292958] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_c.so\n'}
+[0.293011] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces\n'}
+[0.293063] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg\n'}
+[0.293115] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail\n'}
+[0.293167] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__builder.hpp\n'}
+[0.293221] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__traits.hpp\n'}
+[0.293273] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__struct.hpp\n'}
+[0.293325] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/torque8dof.hpp\n'}
+[0.293377] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces\n'}
+[0.293428] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg\n'}
+[0.293484] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail\n'}
+[0.293537] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.293590] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/dds_fastrtps\n'}
+[0.293642] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.293693] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.293745] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces\n'}
+[0.293797] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg\n'}
+[0.293848] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail\n'}
+[0.293899] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.293951] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/include/ifv_interfaces/ifv_interfaces/msg/detail/torque8dof__type_support.cpp\n'}
+[0.294013] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.294065] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.294117] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/pythonpath.sh\n'}
+[0.294171] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/pythonpath.dsv\n'}
+[0.294224] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info\n'}
+[0.294275] (ifv_interfaces) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.294326] (ifv_interfaces) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.294378] (ifv_interfaces) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.294430] (ifv_interfaces) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.294480] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces\n'}
+[0.294531] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.294584] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.294635] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg\n'}
+[0.294687] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/_torque8dof_s.c\n'}
+[0.294740] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/__init__.py\n'}
+[0.294792] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg/_torque8dof.py\n'}
+[0.294843] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/__init__.py\n'}
+[0.294895] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.294946] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/_ifv_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[0.295000] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.295054] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.295114] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/libifv_interfaces__rosidl_generator_py.so\n'}
+[0.298768] (-) TimerEvent: {}
+[0.315354] (ifv_interfaces) StdoutLine: {'line': b"Listing '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces'...\n"}
+[0.315522] (ifv_interfaces) StdoutLine: {'line': b"Listing '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/msg'...\n"}
+[0.318629] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.318787] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.318941] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages/ifv_interfaces/ifv_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.319189] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/lib/libifv_interfaces__rosidl_generator_py.so\n'}
+[0.319292] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/msg/Torque8dof.idl\n'}
+[0.319432] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/msg/Torque8dof.msg\n'}
+[0.319580] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/package_run_dependencies/ifv_interfaces\n'}
+[0.319667] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/parent_prefix_path/ifv_interfaces\n'}
+[0.319777] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/ament_prefix_path.sh\n'}
+[0.319897] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.320011] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/path.sh\n'}
+[0.320121] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/environment/path.dsv\n'}
+[0.320256] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.bash\n'}
+[0.320371] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.sh\n'}
+[0.320455] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.zsh\n'}
+[0.320611] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/local_setup.dsv\n'}
+[0.320712] (ifv_interfaces) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/package.dsv\n'}
+[0.320775] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ament_index/resource_index/packages/ifv_interfaces\n'}
+[0.320832] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.320891] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.320949] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.321005] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.321071] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.321131] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.321188] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.321243] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.321302] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.321357] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.321432] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.321533] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.321651] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.321779] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.321856] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.321931] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_pyExport.cmake\n'}
+[0.322138] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/export_ifv_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.322221] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.322292] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.322363] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.322436] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.322507] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.322580] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.322653] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.322774] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfacesConfig.cmake\n'}
+[0.322847] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake/ifv_interfacesConfig-version.cmake\n'}
+[0.322920] (ifv_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/package.xml\n'}
+[0.323318] (ifv_interfaces) CommandEnded: {'returncode': 0}
+[0.379953] (ifv_interfaces) JobEnded: {'identifier': 'ifv_interfaces', 'rc': 0}
+[0.381517] (ifv_pkg) JobStarted: {'identifier': 'ifv_pkg'}
+[0.386239] (ifv_pkg) JobProgress: {'identifier': 'ifv_pkg', 'progress': 'cmake'}
+[0.387014] (ifv_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/longarmape06/ifv_ws/src/ifv_pkg', '-DCMAKE_INSTALL_PREFIX=/home/longarmape06/ifv_ws/install/ifv_pkg'], 'cwd': '/home/longarmape06/ifv_ws/build/ifv_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', ':/opt/ros/humble/lib:/opt/ros/humble/lib'), ('C_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('USER', 'longarmape06'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib'), ('HOME', '/home/longarmape06'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/longarmape06/ifv_ws/src'), ('TERM_PROGRAM_VERSION', '1.70.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '999'), ('SYSTEMD_EXEC_PID', '1729'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '10094'), ('CPLUS_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'longarmape06'), ('JOURNAL_STREAM', '8:39121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'longarmape06'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/longarmape06-Lenovo-Legion-R9000P2021H:@/tmp/.ICE-unix/1694,unix/longarmape06-Lenovo-Legion-R9000P2021H:/tmp/.ICE-unix/1694'), ('INVOCATION_ID', '4dae6625382c4226a4bf0da48fdf19ce'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-38f5680c33.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/longarmape06/ifv_ws/build/ifv_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.398884] (-) TimerEvent: {}
+[0.425001] (ifv_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.2.0\n'}
+[0.462123] (ifv_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.2.0\n'}
+[0.468822] (ifv_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.499004] (-) TimerEvent: {}
+[0.513041] (ifv_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.518353] (ifv_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.518530] (ifv_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.518771] (ifv_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.520760] (ifv_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.570565] (ifv_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.581035] (ifv_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.581280] (ifv_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.581819] (ifv_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.584142] (ifv_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.599115] (-) TimerEvent: {}
+[0.699389] (-) TimerEvent: {}
+[0.711498] (ifv_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.4") found components: Interpreter \n'}
+[0.784170] (ifv_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.799496] (-) TimerEvent: {}
+[0.830557] (ifv_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.833535] (ifv_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.839110] (ifv_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.848246] (ifv_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.861389] (ifv_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.899617] (-) TimerEvent: {}
+[0.915224] (ifv_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.917542] (ifv_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.982602] (ifv_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.999738] (-) TimerEvent: {}
+[1.001237] (ifv_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.033599] (ifv_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.099862] (-) TimerEvent: {}
+[1.157447] (ifv_pkg) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.2 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.199985] (-) TimerEvent: {}
+[1.256277] (ifv_pkg) StdoutLine: {'line': b'-- Found gazebo_dev: 3.7.0 (/opt/ros/humble/share/gazebo_dev/cmake)\n'}
+[1.261134] (ifv_pkg) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[1.262370] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[1.268576] (ifv_pkg) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[1.300109] (-) TimerEvent: {}
+[1.327852] (ifv_pkg) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[1.352564] (ifv_pkg) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[1.369373] (ifv_pkg) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[1.400236] (-) TimerEvent: {}
+[1.485932] (ifv_pkg) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[1.498980] (ifv_pkg) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[1.500320] (-) TimerEvent: {}
+[1.502338] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[1.509024] (ifv_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.510476] (ifv_pkg) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[1.510767] (ifv_pkg) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[1.514127] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[1.520178] (ifv_pkg) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[1.535815] (ifv_pkg) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[1.540376] (ifv_pkg) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[1.547334] (ifv_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[1.550655] (ifv_pkg) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[1.550758] (ifv_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[1.553803] (ifv_pkg) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[1.553912] (ifv_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[1.556968] (ifv_pkg) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[1.557090] (ifv_pkg) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[1.560127] (ifv_pkg) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[1.560240] (ifv_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[1.563343] (ifv_pkg) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[1.563446] (ifv_pkg) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[1.566608] (ifv_pkg) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[1.600889] (-) TimerEvent: {}
+[1.636544] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[1.638384] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[1.638697] (ifv_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[1.650510] (ifv_pkg) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[1.657018] (ifv_pkg) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[1.659738] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[1.667192] (ifv_pkg) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[1.684248] (ifv_pkg) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[1.688776] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[1.694038] (ifv_pkg) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[1.700989] (-) TimerEvent: {}
+[1.710060] (ifv_pkg) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[1.711664] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.712018] (ifv_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[1.723871] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[1.726952] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[1.733067] (ifv_pkg) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[1.749054] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.750954] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.751273] (ifv_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[1.751594] (ifv_pkg) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.752221] (ifv_pkg) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.753183] (ifv_pkg) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[1.759949] (ifv_pkg) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[1.760512] (ifv_pkg) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[1.761813] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[1.762135] (ifv_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[1.762370] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[1.764329] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[1.764704] (ifv_pkg) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[1.801107] (-) TimerEvent: {}
+[1.804173] (ifv_pkg) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[1.811445] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[1.817899] (ifv_pkg) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[1.833515] (ifv_pkg) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[1.837044] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[1.842714] (ifv_pkg) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[1.858020] (ifv_pkg) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[1.858372] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.858691] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[1.858986] (ifv_pkg) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.861432] (ifv_pkg) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[1.861721] (ifv_pkg) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[1.867840] (ifv_pkg) StdoutLine: {'line': b'--   Found tbb, version 2021.7.0\n'}
+[1.882712] (ifv_pkg) StdoutLine: {'line': b'-- Found ifv_interfaces: 0.0.0 (/home/longarmape06/ifv_ws/install/ifv_interfaces/share/ifv_interfaces/cmake)\n'}
+[1.893289] (ifv_pkg) StdoutLine: {'line': b'-- Found gazebo_ros: 3.7.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[1.899501] (ifv_pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.901193] (-) TimerEvent: {}
+[1.970528] (ifv_pkg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.971065] (ifv_pkg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/longarmape06/ifv_ws/src/ifv_pkg/include\n'}
+[1.971159] (ifv_pkg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.971472] (ifv_pkg) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.971847] (ifv_pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.972178] (ifv_pkg) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.972779] (ifv_pkg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.972878] (ifv_pkg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.973139] (ifv_pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.973947] (ifv_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.001303] (-) TimerEvent: {}
+[2.005588] (ifv_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[2.007576] (ifv_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/longarmape06/ifv_ws/build/ifv_pkg\n'}
+[2.016565] (ifv_pkg) CommandEnded: {'returncode': 0}
+[2.017207] (ifv_pkg) JobProgress: {'identifier': 'ifv_pkg', 'progress': 'build'}
+[2.017908] (ifv_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/longarmape06/ifv_ws/build/ifv_pkg', '--', '-j16', '-l16'], 'cwd': '/home/longarmape06/ifv_ws/build/ifv_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', ':/opt/ros/humble/lib:/opt/ros/humble/lib'), ('C_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('USER', 'longarmape06'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib'), ('HOME', '/home/longarmape06'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/longarmape06/ifv_ws/src'), ('TERM_PROGRAM_VERSION', '1.70.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '999'), ('SYSTEMD_EXEC_PID', '1729'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '10094'), ('CPLUS_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'longarmape06'), ('JOURNAL_STREAM', '8:39121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'longarmape06'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/longarmape06-Lenovo-Legion-R9000P2021H:@/tmp/.ICE-unix/1694,unix/longarmape06-Lenovo-Legion-R9000P2021H:/tmp/.ICE-unix/1694'), ('INVOCATION_ID', '4dae6625382c4226a4bf0da48fdf19ce'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-38f5680c33.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/longarmape06/ifv_ws/build/ifv_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble')]), 'shell': False}
+[2.049532] (ifv_pkg) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/ifv_listener.dir/src/sub_joint.cpp.o\x1b[0m\n'}
+[2.050233] (ifv_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/applytorque.dir/src/gazebo_ros_8doftorque.cpp.o\x1b[0m\n'}
+[2.101439] (-) TimerEvent: {}
+[2.201798] (-) TimerEvent: {}
+[2.302083] (-) TimerEvent: {}
+[2.402367] (-) TimerEvent: {}
+[2.502716] (-) TimerEvent: {}
+[2.603022] (-) TimerEvent: {}
+[2.703349] (-) TimerEvent: {}
+[2.803694] (-) TimerEvent: {}
+[2.903986] (-) TimerEvent: {}
+[3.004278] (-) TimerEvent: {}
+[3.104580] (-) TimerEvent: {}
+[3.204872] (-) TimerEvent: {}
+[3.305158] (-) TimerEvent: {}
+[3.405483] (-) TimerEvent: {}
+[3.505796] (-) TimerEvent: {}
+[3.606096] (-) TimerEvent: {}
+[3.706400] (-) TimerEvent: {}
+[3.806713] (-) TimerEvent: {}
+[3.906997] (-) TimerEvent: {}
+[4.007320] (-) TimerEvent: {}
+[4.107624] (-) TimerEvent: {}
+[4.207933] (-) TimerEvent: {}
+[4.308250] (-) TimerEvent: {}
+[4.408559] (-) TimerEvent: {}
+[4.508913] (-) TimerEvent: {}
+[4.609264] (-) TimerEvent: {}
+[4.709604] (-) TimerEvent: {}
+[4.809928] (-) TimerEvent: {}
+[4.910263] (-) TimerEvent: {}
+[5.010594] (-) TimerEvent: {}
+[5.110936] (-) TimerEvent: {}
+[5.211259] (-) TimerEvent: {}
+[5.311540] (-) TimerEvent: {}
+[5.411835] (-) TimerEvent: {}
+[5.512171] (-) TimerEvent: {}
+[5.612606] (-) TimerEvent: {}
+[5.712968] (-) TimerEvent: {}
+[5.813366] (-) TimerEvent: {}
+[5.913768] (-) TimerEvent: {}
+[6.014094] (-) TimerEvent: {}
+[6.114421] (-) TimerEvent: {}
+[6.214749] (-) TimerEvent: {}
+[6.315095] (-) TimerEvent: {}
+[6.415429] (-) TimerEvent: {}
+[6.515744] (-) TimerEvent: {}
+[6.616061] (-) TimerEvent: {}
+[6.716398] (-) TimerEvent: {}
+[6.816735] (-) TimerEvent: {}
+[6.917050] (-) TimerEvent: {}
+[7.017355] (-) TimerEvent: {}
+[7.117666] (-) TimerEvent: {}
+[7.217974] (-) TimerEvent: {}
+[7.318289] (-) TimerEvent: {}
+[7.418651] (-) TimerEvent: {}
+[7.518975] (-) TimerEvent: {}
+[7.619298] (-) TimerEvent: {}
+[7.719623] (-) TimerEvent: {}
+[7.819947] (-) TimerEvent: {}
+[7.920274] (-) TimerEvent: {}
+[8.020605] (-) TimerEvent: {}
+[8.120990] (-) TimerEvent: {}
+[8.221316] (-) TimerEvent: {}
+[8.321690] (-) TimerEvent: {}
+[8.422046] (-) TimerEvent: {}
+[8.522430] (-) TimerEvent: {}
+[8.622785] (-) TimerEvent: {}
+[8.723171] (-) TimerEvent: {}
+[8.818694] (ifv_pkg) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable ifv_listener\x1b[0m\n'}
+[8.823300] (-) TimerEvent: {}
+[8.923675] (-) TimerEvent: {}
+[9.024026] (-) TimerEvent: {}
+[9.124385] (-) TimerEvent: {}
+[9.167873] (ifv_pkg) StdoutLine: {'line': b'[ 75%] Built target ifv_listener\n'}
+[9.224539] (-) TimerEvent: {}
+[9.324912] (-) TimerEvent: {}
+[9.425245] (-) TimerEvent: {}
+[9.525570] (-) TimerEvent: {}
+[9.625905] (-) TimerEvent: {}
+[9.726223] (-) TimerEvent: {}
+[9.826526] (-) TimerEvent: {}
+[9.926842] (-) TimerEvent: {}
+[10.027179] (-) TimerEvent: {}
+[10.127501] (-) TimerEvent: {}
+[10.228230] (-) TimerEvent: {}
+[10.328560] (-) TimerEvent: {}
+[10.428870] (-) TimerEvent: {}
+[10.529190] (-) TimerEvent: {}
+[10.629495] (-) TimerEvent: {}
+[10.729809] (-) TimerEvent: {}
+[10.830118] (-) TimerEvent: {}
+[10.930544] (-) TimerEvent: {}
+[11.030849] (-) TimerEvent: {}
+[11.131123] (-) TimerEvent: {}
+[11.231394] (-) TimerEvent: {}
+[11.331680] (-) TimerEvent: {}
+[11.431948] (-) TimerEvent: {}
+[11.532262] (-) TimerEvent: {}
+[11.632560] (-) TimerEvent: {}
+[11.732823] (-) TimerEvent: {}
+[11.833116] (-) TimerEvent: {}
+[11.933401] (-) TimerEvent: {}
+[12.033658] (-) TimerEvent: {}
+[12.133912] (-) TimerEvent: {}
+[12.234184] (-) TimerEvent: {}
+[12.334529] (-) TimerEvent: {}
+[12.434868] (-) TimerEvent: {}
+[12.535197] (-) TimerEvent: {}
+[12.635513] (-) TimerEvent: {}
+[12.735787] (-) TimerEvent: {}
+[12.836048] (-) TimerEvent: {}
+[12.936344] (-) TimerEvent: {}
+[13.036630] (-) TimerEvent: {}
+[13.136915] (-) TimerEvent: {}
+[13.237199] (-) TimerEvent: {}
+[13.337505] (-) TimerEvent: {}
+[13.437820] (-) TimerEvent: {}
+[13.538097] (-) TimerEvent: {}
+[13.638397] (-) TimerEvent: {}
+[13.738673] (-) TimerEvent: {}
+[13.838945] (-) TimerEvent: {}
+[13.939209] (-) TimerEvent: {}
+[14.039479] (-) TimerEvent: {}
+[14.140335] (-) TimerEvent: {}
+[14.240644] (-) TimerEvent: {}
+[14.340989] (-) TimerEvent: {}
+[14.441273] (-) TimerEvent: {}
+[14.541549] (-) TimerEvent: {}
+[14.642383] (-) TimerEvent: {}
+[14.742681] (-) TimerEvent: {}
+[14.842960] (-) TimerEvent: {}
+[14.943235] (-) TimerEvent: {}
+[14.980980] (ifv_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libapplytorque.so\x1b[0m\n'}
+[15.043356] (-) TimerEvent: {}
+[15.144291] (-) TimerEvent: {}
+[15.245041] (-) TimerEvent: {}
+[15.345326] (-) TimerEvent: {}
+[15.445655] (-) TimerEvent: {}
+[15.473949] (ifv_pkg) StdoutLine: {'line': b'[100%] Built target applytorque\n'}
+[15.480246] (ifv_pkg) CommandEnded: {'returncode': 0}
+[15.495626] (ifv_pkg) JobProgress: {'identifier': 'ifv_pkg', 'progress': 'install'}
+[15.496393] (ifv_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/longarmape06/ifv_ws/build/ifv_pkg'], 'cwd': '/home/longarmape06/ifv_ws/build/ifv_pkg', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', ':/opt/ros/humble/lib:/opt/ros/humble/lib'), ('C_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('USER', 'longarmape06'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/ros/humble/lib'), ('HOME', '/home/longarmape06'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/longarmape06/ifv_ws/src'), ('TERM_PROGRAM_VERSION', '1.70.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '999'), ('SYSTEMD_EXEC_PID', '1729'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '10094'), ('CPLUS_INCLUDE_PATH', ':/opt/ros/humble/include:/opt/ros/humble/include'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'longarmape06'), ('JOURNAL_STREAM', '8:39121'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'longarmape06'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/longarmape06-Lenovo-Legion-R9000P2021H:@/tmp/.ICE-unix/1694,unix/longarmape06-Lenovo-Legion-R9000P2021H:/tmp/.ICE-unix/1694'), ('INVOCATION_ID', '4dae6625382c4226a4bf0da48fdf19ce'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-38f5680c33.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/longarmape06/ifv_ws/build/ifv_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/longarmape06/ifv_ws/install/ifv_interfaces:/opt/ros/humble')]), 'shell': False}
+[15.500153] (ifv_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.500308] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/lib/ifv_pkg/ifv_listener\n'}
+[15.502440] (ifv_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/longarmape06/ifv_ws/install/ifv_pkg/lib/ifv_pkg/ifv_listener" to ""\n'}
+[15.502557] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/launch\n'}
+[15.502642] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/launch/mylaunch.py\n'}
+[15.502705] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/world\n'}
+[15.502791] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/world/IFVsim.world\n'}
+[15.502857] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ament_index/resource_index/package_run_dependencies/ifv_pkg\n'}
+[15.502943] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ament_index/resource_index/parent_prefix_path/ifv_pkg\n'}
+[15.503028] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/ament_prefix_path.sh\n'}
+[15.503092] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/ament_prefix_path.dsv\n'}
+[15.503186] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/path.sh\n'}
+[15.503249] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/environment/path.dsv\n'}
+[15.503345] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.bash\n'}
+[15.503437] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.sh\n'}
+[15.503496] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.zsh\n'}
+[15.503546] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/local_setup.dsv\n'}
+[15.503594] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/package.dsv\n'}
+[15.503670] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ament_index/resource_index/packages/ifv_pkg\n'}
+[15.503730] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/cmake/ifv_pkgConfig.cmake\n'}
+[15.503810] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/cmake/ifv_pkgConfig-version.cmake\n'}
+[15.503859] (ifv_pkg) StdoutLine: {'line': b'-- Installing: /home/longarmape06/ifv_ws/install/ifv_pkg/share/ifv_pkg/package.xml\n'}
+[15.504696] (ifv_pkg) CommandEnded: {'returncode': 0}
+[15.539541] (ifv_pkg) JobEnded: {'identifier': 'ifv_pkg', 'rc': 0}
+[15.540101] (-) EventReactorShutdown: {}

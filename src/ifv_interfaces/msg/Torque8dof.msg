@@ -1,0 +1,8 @@
+float32 lf1
+float32 lf2
+float32 rf1
+float32 rf2
+float32 lh1
+float32 lh2
+float32 rh1
+float32 rh2

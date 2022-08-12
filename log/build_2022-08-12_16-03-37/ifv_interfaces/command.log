@@ -1,0 +1,4 @@
+Invoking command in '/home/longarmape06/ifv_ws/build/ifv_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/longarmape06/ifv_ws/build/ifv_interfaces -- -j16 -l16
+Invoked command in '/home/longarmape06/ifv_ws/build/ifv_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/longarmape06/ifv_ws/build/ifv_interfaces -- -j16 -l16
+Invoking command in '/home/longarmape06/ifv_ws/build/ifv_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/longarmape06/ifv_ws/build/ifv_interfaces
+Invoked command in '/home/longarmape06/ifv_ws/build/ifv_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/longarmape06/ifv_ws/build/ifv_interfaces
