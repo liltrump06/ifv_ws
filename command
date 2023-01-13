@@ -1,0 +1,1 @@
+ros2 run --prefix 'gdbserver localhost:3000' ft4222_test ft4222_cent_test

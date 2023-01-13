@@ -5,7 +5,7 @@
 #include <ifv_pkg/gazebo_ros_8doftorque.hpp>
 #include <gazebo_ros/conversions/geometry_msgs.hpp>
 #include <gazebo_ros/node.hpp>
-#include "ifv_interfaces/msg/torque8dof.hpp"
+#include "ifv_interfaces/msg/torque12dof.hpp"
 #ifdef IGN_PROFILER_ENABLE
 #include <ignition/common/Profiler.hh>
 #endif
@@ -26,7 +26,7 @@ public:
   gazebo_ros::Node::SharedPtr ros_node_;
 
   /// Wrench subscriber
-  rclcpp::Subscription<ifv_interfaces::msg::Torque8dof>::SharedPtr torque_sub_;
+  rclcpp::Subscription<ifv_interfaces::msg::Torque12dof>::SharedPtr torque_sub_;
 
   /// Container for the wrench force that this plugin exerts on the body.
   std::vector<float> torque_vec_;
@@ -55,7 +55,7 @@ void GazeboRos8DofTorque::Load(gazebo::physics::ModelPtr model_, sdf::ElementPtr
   impl_->ros_node_ = gazebo_ros::Node::Get(sdf_);
   // Get QoS profiles
   const gazebo_ros::QoS & qos = impl_->ros_node_->get_qos();
-  impl_->torque_sub_ = impl_->ros_node_->create_subscription<ifv_interfaces::msg::Torque8dof>(
+  impl_->torque_sub_ = impl_->ros_node_->create_subscription<ifv_interfaces::msg::Torque12dof>(
     "gazebo_ros_8doftorque", qos.get_subscription_qos("gazebo_ros_8doftorque", rclcpp::SystemDefaultsQoS()),
     std::bind(&GazeboRos8DofTorque::OnRosWrenchMsg, this, std::placeholders::_1));
   // Callback on every iteration
@@ -64,15 +64,19 @@ void GazeboRos8DofTorque::Load(gazebo::physics::ModelPtr model_, sdf::ElementPtr
     std::bind(&GazeboRos8DofTorque::OnUpdate, this));
 }
 
-void GazeboRos8DofTorque::OnRosWrenchMsg(const ifv_interfaces::msg::Torque8dof &msg)
+void GazeboRos8DofTorque::OnRosWrenchMsg(const ifv_interfaces::msg::Torque12dof &msg)
 {
   std::vector<float> mid_vec;
+  mid_vec.push_back(msg.rh3);
   mid_vec.push_back(msg.rh2);
   mid_vec.push_back(msg.rh1);
+  mid_vec.push_back(msg.lh3);
   mid_vec.push_back(msg.lh2);
   mid_vec.push_back(msg.lh1);
+  mid_vec.push_back(msg.rf3);
   mid_vec.push_back(msg.rf2);
   mid_vec.push_back(msg.rf1);
+  mid_vec.push_back(msg.lf3);
   mid_vec.push_back(msg.lf2);
   mid_vec.push_back(msg.lf1);
   impl_->torque_vec_ = mid_vec;
@@ -83,14 +87,18 @@ void GazeboRos8DofTorque::OnRosWrenchMsg(const ifv_interfaces::msg::Torque8dof &
 void GazeboRos8DofTorque::OnUpdate()
 {
   if(!(impl_->torque_vec_.empty())&&(impl_->pre_torque)){
-    this->model->GetJoint("LF_body2thigh")->SetForce(0,impl_->torque_vec_[0]);
-    this->model->GetJoint("LF_thigh2calf")->SetForce(0,impl_->torque_vec_[1]);
-    this->model->GetJoint("RF_body2thigh")->SetForce(0,impl_->torque_vec_[2]);
-    this->model->GetJoint("RF_thigh2calf")->SetForce(0,impl_->torque_vec_[3]);
-    this->model->GetJoint("LH_body2thigh")->SetForce(0,impl_->torque_vec_[4]);
-    this->model->GetJoint("LH_thigh2calf")->SetForce(0,impl_->torque_vec_[5]);
-    this->model->GetJoint("RH_body2thigh")->SetForce(0,impl_->torque_vec_[6]);
-    this->model->GetJoint("RH_thigh2calf")->SetForce(0,impl_->torque_vec_[7]);
+    this->model->GetJoint("LF_body2hip")->SetForce(0,impl_->torque_vec_[0]);
+    this->model->GetJoint("LF_hip2thigh")->SetForce(0,impl_->torque_vec_[1]);
+    this->model->GetJoint("LF_thigh2calf")->SetForce(0,impl_->torque_vec_[2]);
+    this->model->GetJoint("RF_body2hip")->SetForce(0,impl_->torque_vec_[3]);
+    this->model->GetJoint("RF_hip2thigh")->SetForce(0,impl_->torque_vec_[4]);
+    this->model->GetJoint("RF_thigh2calf")->SetForce(0,impl_->torque_vec_[5]);
+    this->model->GetJoint("LH_body2hip")->SetForce(0,impl_->torque_vec_[6]);
+    this->model->GetJoint("LH_hip2thigh")->SetForce(0,impl_->torque_vec_[7]);
+    this->model->GetJoint("LH_thigh2calf")->SetForce(0,impl_->torque_vec_[8]);
+    this->model->GetJoint("RH_body2hip")->SetForce(0,impl_->torque_vec_[9]);
+    this->model->GetJoint("RH_hip2thigh")->SetForce(0,impl_->torque_vec_[10]);
+    this->model->GetJoint("RH_thigh2calf")->SetForce(0,impl_->torque_vec_[11]);
     impl_->pre_torque = false;
     /*std::stringstream ss;
     for (auto it = impl_->torque_vec_.begin();it != impl_->torque_vec_.end();it++)

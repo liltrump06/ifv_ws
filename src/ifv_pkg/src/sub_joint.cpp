@@ -6,7 +6,7 @@
 #include <chrono>
 #include "rclcpp/rclcpp.hpp" 
 #include "sensor_msgs/msg/joint_state.hpp"
-#include "ifv_interfaces/msg/torque8dof.hpp"
+#include "ifv_interfaces/msg/torque12dof.hpp"
 
 
 
@@ -22,8 +22,8 @@ public:
     subscription_ = this->create_subscription<sensor_msgs::msg::JointState>(
       "IFV/my_joint_states", 20, std::bind(&sub_joint::topic_callback, this, _1));
     // Then publish the control torque to the plugin contained node.
-    publisher_ = this->create_publisher<ifv_interfaces::msg::Torque8dof>("gazebo_ros_8doftorque", rclcpp::SystemDefaultsQoS());
-    timer_ = this->create_wall_timer(5ms, std::bind(&sub_joint::timer_callback, this));
+    publisher_ = this->create_publisher<ifv_interfaces::msg::Torque12dof>("gazebo_ros_8doftorque", rclcpp::SystemDefaultsQoS());
+    timer_ = this->create_wall_timer(1ms, std::bind(&sub_joint::timer_callback, this));
     
 
   }
@@ -47,13 +47,15 @@ public:
     char *ssp = lp.data();
     RCLCPP_INFO(this->get_logger(),ssp);
    */
-    float Kd = 0.02;
-    float Kp = 1.5;
+    float Kd = 0.005;
+    float Kp = 1;
+    std::vector<double> position_ref {0,0,0,0,0,0,0,0,0,0,0,0};
+
     std::vector<double> torque_this_time;
     for(unsigned int it = 0;it < joint_position.size();it++)
     {
       unsigned int m = joint_position.size();
-      torque_this_time.push_back(Kp * (0-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+      torque_this_time.push_back(Kp * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
     }
     this->applied_torque = torque_this_time;
 
@@ -79,21 +81,25 @@ public:
   void timer_callback()
   {
     if (this->start_pub == 1){
-      auto message = ifv_interfaces::msg::Torque8dof();
+      auto message = ifv_interfaces::msg::Torque12dof();
       message.lf1 = this->applied_torque[0];
       message.lf2 = this->applied_torque[1];
-      message.rf1 = this->applied_torque[2];
-      message.rf2 = this->applied_torque[3];
-      message.lh1 = this->applied_torque[4];
-      message.lh2 = this->applied_torque[5];
-      message.rh1 = this->applied_torque[6];
-      message.rh2 = this->applied_torque[7];
+      message.lf3 = this->applied_torque[2];
+      message.rf1 = this->applied_torque[3];
+      message.rf2 = this->applied_torque[4];
+      message.rf3 = this->applied_torque[5];
+      message.lh1 = this->applied_torque[6];
+      message.lh2 = this->applied_torque[7];
+      message.lh3 = this->applied_torque[8];
+      message.rh1 = this->applied_torque[9];
+      message.rh2 = this->applied_torque[10];
+      message.rh3 = this->applied_torque[11];
       //RCLCPP_INFO(this->get_logger(),"publishing '%f'" ,message.lf1);
       publisher_->publish(message);
     }
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<ifv_interfaces::msg::Torque8dof>::SharedPtr publisher_;
+  rclcpp::Publisher<ifv_interfaces::msg::Torque12dof>::SharedPtr publisher_;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr subscription_;
 };
     

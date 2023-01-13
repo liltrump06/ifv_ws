@@ -15,6 +15,8 @@ find_package(builtin_interfaces REQUIRED)
 find_package(gazebo_ros REQUIRED)
 
 include_directories(${GAZEBO_INCLUDE_DIRS})
+include_directories(${gazebo_ros_INCLUDE_DIRS})
+include_directories("/opt/ros/humble/include/gazebo_ros")
 link_directories(${GAZEBO_LIBRARY_DIRS})
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -44,7 +46,6 @@ ament_target_dependencies(applytorque
 "rclcpp" 
 "sensor_msgs" 
 "ifv_interfaces"
-"gazebo_ros"
 )
 
 

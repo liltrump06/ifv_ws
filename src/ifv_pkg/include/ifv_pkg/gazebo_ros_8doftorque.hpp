@@ -16,7 +16,7 @@
 #define GAZEBO_PLUGINS__GAZEBO_ROS_8DOFTORQUE_HPP_
 
 #include <gazebo/common/Plugin.hh>
-#include "ifv_interfaces/msg/torque8dof.hpp"
+#include "ifv_interfaces/msg/torque12dof.hpp"
 #include <gazebo/physics/Model.hh>
 
 #include <memory>
@@ -74,7 +74,7 @@ private:
   /// Callback when a ROS Wrench message is received
   /// \param[in] msg The Incoming ROS message representing the new force to
   /// exert.
-  void OnRosWrenchMsg(const ifv_interfaces::msg::Torque8dof &msg);
+  void OnRosWrenchMsg(const ifv_interfaces::msg::Torque12dof &msg);
 
   /// Private data pointer
   std::unique_ptr<GazeboRos8DofTorquePrivate> impl_;

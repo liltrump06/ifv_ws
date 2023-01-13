@@ -1,6 +1,0 @@
-{
-  "package_name": "ifv_interfaces",
-  "non_idl_tuples": [
-    "/home/longarmape06/ifv_ws/src/ifv_interfaces:msg/Torque8dof.msg"
-  ]
-}

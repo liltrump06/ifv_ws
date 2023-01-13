@@ -1,0 +1,7 @@
+{
+   "python.autoComplete.extraPaths": [
+      "/home/longarmape06/ifv_ws/install/ifv_interfaces/local/lib/python3.10/dist-packages",
+      "/opt/ros/humble/lib/python3.10/site-packages",
+      "/opt/ros/humble/local/lib/python3.10/dist-packages"
+   ]
+}
