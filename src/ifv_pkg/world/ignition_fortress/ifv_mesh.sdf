@@ -1,27 +1,66 @@
 <?xml version="1.0"?>
-<sdf version="1.4">
-  <world name="default">
-    <include>
-      <uri>model://ground_plane</uri>
-    </include>
+<sdf version="1.6">
+  <world name="ifv_simulation">
+    <plugin
+      filename="ignition-gazebo-physics-system"
+      name="ignition::gazebo::systems::Physics">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-scene-broadcaster-system"
+      name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
 
-    <include>
-      <uri>model://sun</uri>
-    </include>
-
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+          <range>1000</range>
+          <constant>0.9</constant>
+          <linear>0.01</linear>
+          <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+          <collision name="collision">
+          <geometry>
+              <plane>
+              <normal>0 0 1</normal>
+              </plane>
+          </geometry>
+          </collision>
+          <visual name="visual">
+          <geometry>
+              <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+              </plane>
+          </geometry>
+          <material>
+              <ambient>0.8 0.8 0.8 1</ambient>
+              <diffuse>0.8 0.8 0.8 1</diffuse>
+              <specular>0.8 0.8 0.8 1</specular>
+          </material>
+          </visual>
+      </link>
+    </model>
     <model name="IFV">
       <static>false</static>
-      <pose>0 0 0.24 0 0 0</pose>
+      <pose>0 0 0.4 0 0 0</pose>
 <!- -----------------------BODY-------------------- ->
 
       <link name='chassis'>
         <pose>0 0 0 0 0 0</pose>
         <inertial>
-        <mass>0.24</mass>
+        <mass>0.024</mass>
         <inertia>
-          <ixx>0.002</ixx>
-          <iyy>0.0034</iyy>
-          <izz>0.005</izz>
+          <ixx>0.0002</ixx>
+          <iyy>0.00034</iyy>
+          <izz>0.0005</izz>
         </inertia>
         </inertial>
         <collision name='bodyc'>
@@ -521,12 +560,6 @@
         <parent>chassis</parent>
         <axis>
           <xyz>1 0 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -536,12 +569,6 @@
         <parent>LF_hip</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -551,12 +578,6 @@
         <parent>LF_thigh</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>55</effort> 
-            <lower>2.77507351067</lower>
-            <upper>0.61086523819</upper>
-            <velocity>28.6</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -566,12 +587,6 @@
         <parent>chassis</parent>
         <axis>
           <xyz>1 0 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -581,12 +596,6 @@
         <parent>RF_hip</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -596,12 +605,6 @@
         <parent>RF_thigh</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>55</effort> 
-            <lower>2.77507351067</lower>
-            <upper>0.61086523819</upper>
-            <velocity>28.6</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -611,12 +614,6 @@
         <parent>chassis</parent>
         <axis>
           <xyz>1 0 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -626,12 +623,6 @@
         <parent>LH_hip</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -641,12 +632,6 @@
         <parent>LH_thigh</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>55</effort> 
-            <lower>2.77507351067</lower>
-            <upper>0.61086523819</upper>
-            <velocity>28.6</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -656,12 +641,6 @@
         <parent>chassis</parent>
         <axis>
           <xyz>1 0 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -671,12 +650,6 @@
         <parent>RH_hip</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>20</effort> 
-            <lower>1.0471975512</lower>
-            <upper>0.872664625997</upper>
-            <velocity>52.4</velocity>
-          </limit>
         </axis>
       </joint>
 
@@ -686,49 +659,26 @@
         <parent>RH_thigh</parent>
         <axis>
           <xyz>0 1 0</xyz>
-          <limit>
-            <effort>55</effort> 
-            <lower>2.77507351067</lower>
-            <upper>0.61086523819</upper>
-            <velocity>28.6</velocity>
-          </limit>
         </axis>
       </joint>
+      <plugin
+        filename="ignition-gazebo-apply-joint-force-system"
+        name="ignition::gazebo::systems::ApplyJointForce">
+        <!-- <joint_name>RF_body2hip</joint_name>
+        <joint_name>RF_hip2thigh</joint_name>
+        <joint_name>RF_thigh2calf</joint_name>
+        <joint_name>LF_body2hip</joint_name>
+        <joint_name>LF_hip2thigh</joint_name>
+        <joint_name>LF_thigh2calf</joint_name>
+        <joint_name>RH_body2hip</joint_name>
+        <joint_name>RH_hip2thigh</joint_name>
+        <joint_name>RH_thigh2calf</joint_name>
+        <joint_name>LH_body2hip</joint_name>
+        <joint_name>LH_hip2thigh</joint_name> -->
+        <joint_name>LH_thigh2calf</joint_name>
+      </plugin>
       
-      <plugin name="gazebo_ros_joint_state_publisher"
-        filename="libgazebo_ros_joint_state_publisher.so">
-
-      <ros>
-
-        <!-- Add a namespace -->
-        <namespace>/IFV</namespace>
-
-        <!-- Remap the default topic -->
-        <remapping>joint_states:=my_joint_states</remapping>
-
-      </ros>
-
-      <!-- Update rate in Hertz -->
-      <update_rate>2000</update_rate>
-
-      <!-- Name of joints in the model whose states will be published. -->
-      <joint_name>LF_body2hip</joint_name>
-      <joint_name>LF_hip2thigh</joint_name>
-      <joint_name>LF_thigh2calf</joint_name>
-      <joint_name>RF_body2hip</joint_name>
-      <joint_name>RF_hip2thigh</joint_name>
-      <joint_name>RF_thigh2calf</joint_name>
-      <joint_name>LH_body2hip</joint_name>
-      <joint_name>LH_hip2thigh</joint_name>
-      <joint_name>LH_thigh2calf</joint_name>
-      <joint_name>RH_body2hip</joint_name>
-      <joint_name>RH_hip2thigh</joint_name>
-      <joint_name>RH_thigh2calf</joint_name>
-
-      </plugin>
-      <plugin name="applytorque"
-        filename="/home/longarmape06/ifv_ws/build/ifv_pkg/libapplytorque.so">
-      </plugin>
-    </model>  
+      
+    </model> 
   </world>
 </sdf>

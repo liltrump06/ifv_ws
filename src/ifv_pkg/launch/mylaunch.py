@@ -15,11 +15,11 @@ def generate_launch_description():
  
     #os.environ["GAZEBO_MODEL_PATH"] = os.path.join(pkg_dir, 'model')
  
-    world = os.path.join(pkg_dir, 'world', world_file_name)
+    world = os.path.join(pkg_dir, 'world/gazebo11', world_file_name)
     launch_file_dir = os.path.join(pkg_dir, 'launch')
  
     gazebo = ExecuteProcess(
-            cmd=['gazebo', '--verbose', world, '-s', 'libgazebo_ros_init.so', 
+            cmd=['gazebo', '--verbose', world,'-u','-s', 'libgazebo_ros_init.so', 
             '-s', 'libgazebo_ros_factory.so'],
             output='screen')
  

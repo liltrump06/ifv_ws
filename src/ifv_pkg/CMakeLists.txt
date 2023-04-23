@@ -38,7 +38,8 @@ add_executable(ifv_listener src/sub_joint.cpp)
 ament_target_dependencies(ifv_listener rclcpp sensor_msgs ifv_interfaces)
 
 
-add_library(applytorque SHARED src/gazebo_ros_8doftorque.cpp)
+add_library(applytorque SHARED src/gazebo_ros_12doftorque.cpp)
+add_library(system_gui SHARED src/plugins/systemgui.cpp)
 target_include_directories(applytorque PUBLIC include)
 ament_target_dependencies(applytorque 
 "gazebo_ros"
@@ -48,8 +49,12 @@ ament_target_dependencies(applytorque
 "ifv_interfaces"
 )
 
+ament_target_dependencies(system_gui 
+"gazebo_dev"
+)
 
 target_link_libraries(applytorque ${GAZEBO_LIBRARIES} )
+target_link_libraries(system_gui ${GAZEBO_LIBRARIES} )
 
 install(TARGETS
   ifv_listener

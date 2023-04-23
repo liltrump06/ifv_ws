@@ -22,8 +22,8 @@ public:
     subscription_ = this->create_subscription<sensor_msgs::msg::JointState>(
       "IFV/my_joint_states", 20, std::bind(&sub_joint::topic_callback, this, _1));
     // Then publish the control torque to the plugin contained node.
-    publisher_ = this->create_publisher<ifv_interfaces::msg::Torque12dof>("gazebo_ros_8doftorque", rclcpp::SystemDefaultsQoS());
-    timer_ = this->create_wall_timer(1ms, std::bind(&sub_joint::timer_callback, this));
+    publisher_ = this->create_publisher<ifv_interfaces::msg::Torque12dof>("gazebo_ros_12doftorque", rclcpp::SystemDefaultsQoS());
+    timer_ = this->create_wall_timer(0.1ms, std::bind(&sub_joint::timer_callback, this));
     
 
   }
@@ -47,15 +47,25 @@ public:
     char *ssp = lp.data();
     RCLCPP_INFO(this->get_logger(),ssp);
    */
-    float Kd = 0.005;
-    float Kp = 1;
-    std::vector<double> position_ref {0,0,0,0,0,0,0,0,0,0,0,0};
+    float Kd = 0.001;
+    float Kp = 0.1;
+    double position_ref[12] = {0,0,0,0,0,0,0,0,0,0,0,0};
 
     std::vector<double> torque_this_time;
     for(unsigned int it = 0;it < joint_position.size();it++)
     {
       unsigned int m = joint_position.size();
-      torque_this_time.push_back(Kp * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+      if (it == 0 || it == 3 || it == 6 || it == 9)
+      {
+        torque_this_time.push_back(Kp * 18 * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+      }
+      else if (it == 1 || it == 4 || it == 7 || it == 10)
+      {
+        torque_this_time.push_back(Kp * 3 * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+      }
+      else{
+        torque_this_time.push_back(Kp * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+      }
     }
     this->applied_torque = torque_this_time;
 

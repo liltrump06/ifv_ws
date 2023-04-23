@@ -554,7 +554,7 @@
 
       </plugin>
       <plugin name="applytorque"
-        filename="/home/longarmape06/ifv_ws/build/ifv_pkg/libapplytorque.so">
+        filename="/home/longarmape06/ifv_ws/src/build/ifv_pkg/libapplytorque.so">
       </plugin>
     </model>  
 

@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef GAZEBO_PLUGINS__GAZEBO_ROS_8DOFTORQUE_HPP_
-#define GAZEBO_PLUGINS__GAZEBO_ROS_8DOFTORQUE_HPP_
+#ifndef GAZEBO_PLUGINS__GAZEBO_ROS_12DOFTORQUE_HPP_
+#define GAZEBO_PLUGINS__GAZEBO_ROS_12DOFTORQUE_HPP_
 
 #include <gazebo/common/Plugin.hh>
 #include "ifv_interfaces/msg/torque12dof.hpp"
@@ -23,7 +23,7 @@
 
 namespace gazebo_plugins
 {
-class GazeboRos8DofTorquePrivate;
+class GazeboRos12DofTorquePrivate;
 
 /// This plugin collects data from a ROS topic and applies wrench to a link accordingly.
 /**
@@ -54,14 +54,14 @@ class GazeboRos8DofTorquePrivate;
   \endcode
 */
 
-class GazeboRos8DofTorque : public gazebo::ModelPlugin
+class GazeboRos12DofTorque : public gazebo::ModelPlugin
 {
 public:
   /// Constructor
-  GazeboRos8DofTorque();
+  GazeboRos12DofTorque();
 
   /// Destructor
-  virtual ~GazeboRos8DofTorque();
+  virtual ~GazeboRos12DofTorque();
 public: gazebo::physics::ModelPtr model;
 protected:
   // Documentation inherited
@@ -77,7 +77,7 @@ private:
   void OnRosWrenchMsg(const ifv_interfaces::msg::Torque12dof &msg);
 
   /// Private data pointer
-  std::unique_ptr<GazeboRos8DofTorquePrivate> impl_;
+  std::unique_ptr<GazeboRos12DofTorquePrivate> impl_;
 };
 }  // namespace gazebo_plugins
 
