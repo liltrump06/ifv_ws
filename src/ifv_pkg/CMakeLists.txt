@@ -34,7 +34,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-add_executable(ifv_listener src/sub_joint.cpp)
+add_executable(ifv_listener src/main.cpp)
 ament_target_dependencies(ifv_listener rclcpp sensor_msgs ifv_interfaces)
 
 

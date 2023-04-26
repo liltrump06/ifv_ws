@@ -112,7 +112,7 @@ void GazeboRos12DofTorque::OnUpdate()
     // char *ssp = lp.data();
     // RCLCPP_INFO(impl_->ros_node_->get_logger(),ssp);
     
-    RCLCPP_INFO(impl_->ros_node_->get_logger(),"get rh2 '%f' ",impl_->torque_vec_[0]);
+    // RCLCPP_INFO(impl_->ros_node_->get_logger(),"get rh2 '%f' ",impl_->torque_vec_[0]);
   }
 }
 GZ_REGISTER_MODEL_PLUGIN(GazeboRos12DofTorque)
