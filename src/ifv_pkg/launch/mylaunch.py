@@ -7,7 +7,8 @@ from launch.substitutions import ThisLaunchFileDir,LaunchConfiguration
 from launch_ros.actions import Node
 from launch.actions import ExecuteProcess
 from ament_index_python.packages import get_package_share_directory
- 
+
+controller_config = os.path.join(get_package_share_directory('ifv_pkg'),'config','controller.yaml')
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='True')
     world_file_name = 'ifv_mesh.world'
@@ -27,10 +28,15 @@ def generate_launch_description():
     #spawn_entity = Node(package='gazebo_ros', node_executable='spawn_entity.py',
     #                    arguments=['-entity', 'demo', 'x', 'y', 'z'],
     #                    output='screen')
-    spawn_entity = Node(package='ifv_pkg', executable='ifv_listener',
-                        output='screen')
+    spawn_entity = Node(package='ifv_pkg',
+                        name='sub_joint', 
+                        executable='ifv_listener',
+                        output='screen',
+                        parameters = [controller_config]
+                        )
  
     return LaunchDescription([
         gazebo,
         spawn_entity,
+
     ])

@@ -5,11 +5,10 @@
 #include <string>
 #include <chrono>
 #include "rclcpp/rclcpp.hpp" 
+#include "rclcpp/node.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "sensor_msgs/msg/imu.hpp"
 #include "ifv_interfaces/msg/torque12dof.hpp"
-
-
 
 using std::placeholders::_1;
 using namespace std::chrono_literals;
@@ -19,14 +18,16 @@ class sub_joint : public rclcpp::Node
 public:
   sub_joint(): Node("sub_joint")
   {
+    get_all_parameter();
     //First subscribe all the information from joints.
     subscription1_ = this->create_subscription<sensor_msgs::msg::JointState>(
       "IFV/my_joint_states", 100, std::bind(&sub_joint::topic_callback1, this, _1));
     subscription2_ = this->create_subscription<sensor_msgs::msg::Imu>(
-      "imu_topic/data", 100, std::bind(&sub_joint::topic_callback2, this, _1));
+      "IFV/imu_topic/data", 100, std::bind(&sub_joint::topic_callback2, this, _1));
     // Then publish the control torque to the plugin contained node.
     publisher_ = this->create_publisher<ifv_interfaces::msg::Torque12dof>("gazebo_ros_12doftorque", rclcpp::SystemDefaultsQoS());
-    timer_ = this->create_wall_timer(0.1ms, std::bind(&sub_joint::timer_callback, this));
+    timer_ = this->create_wall_timer(1ms, std::bind(&sub_joint::timer_callback, this));
+    RCLCPP_INFO(this->get_logger(),std::to_string(pdgain[0]).c_str());
     
 
   }
@@ -64,8 +65,6 @@ public:
 
   void set_control()
   {
-    float Kd = 0.001;
-    float Kp = 0.1;
     double position_ref[12] = {0,0,0,0,0,0,0,0,0,0,0,0};
 
     std::vector<double> torque_this_time;
@@ -74,14 +73,14 @@ public:
       unsigned int m = joint_position.size();
       if (it == 0 || it == 3 || it == 6 || it == 9)
       {
-        torque_this_time.push_back(Kp * 18 * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+        torque_this_time.push_back( pdgain[0]* (position_ref[m-it-1]-joint_position[m-it-1]) + pdgain[3]* (0-joint_velocity[m-it-1]));
       }
       else if (it == 1 || it == 4 || it == 7 || it == 10)
       {
-        torque_this_time.push_back(Kp * 3 * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+        torque_this_time.push_back(pdgain[1]*  (position_ref[m-it-1]-joint_position[m-it-1]) +pdgain[4]* (0-joint_velocity[m-it-1]));
       }
       else{
-        torque_this_time.push_back(Kp * (position_ref[m-it-1]-joint_position[m-it-1]) + Kd * (0-joint_velocity[m-it-1]));
+        torque_this_time.push_back(pdgain[2]*(position_ref[m-it-1]-joint_position[m-it-1]) + pdgain[5]* (0-joint_velocity[m-it-1]));
       }
     }
     this->applied_torque = torque_this_time;
@@ -111,6 +110,12 @@ public:
       publisher_->publish(message);
     }
   }
+  
+  void get_all_parameter()
+  {
+    this->declare_parameter("pdgain",rclcpp::PARAMETER_DOUBLE_ARRAY);
+    pdgain = this->get_parameter("pdgain").as_double_array();
+  }
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<ifv_interfaces::msg::Torque12dof>::SharedPtr publisher_;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr subscription1_;
@@ -120,23 +125,8 @@ public:
   geometry_msgs::msg::Quaternion imu_orientation;
   geometry_msgs::msg::Vector3 imu_angular_velocity;
   geometry_msgs::msg::Vector3 imu_linear_acceleration;
+  std::vector<double> pdgain{std::vector<double>(6,1)};
 };
-    
-    /*
-    std::sstream ss;
-    for (auto it = instmsg.begin();it != instmsg.end();it++)
-    {
-      if (it != instmsg.begin()) {
-            ss << " ";
-        }
-        ss << *it;
-    };
-    std::string lp = ss.str();
-    char *ssp = lp.data();
-    RCLCPP_INFO(this->get_logger(),ssp);
-    */
-  
-  
 
 int main(int argc, char * argv[])
 {

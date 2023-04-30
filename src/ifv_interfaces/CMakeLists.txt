@@ -8,12 +8,15 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 #rosidl_generate_interfaces(${PROJECT_NAME}
 #  "msg/Torque8dof.msg"
 #  )
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Torque12dof.msg"
   "srv/Spione.srv"
+  "srv/Startstop.srv"
+  DEPENDENCIES std_msgs 
   )
 # uncomment the following section in order to fill in
 # further dependencies manually.
