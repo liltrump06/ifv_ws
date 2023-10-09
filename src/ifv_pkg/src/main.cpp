@@ -29,7 +29,6 @@ public:
     timer_ = this->create_wall_timer(1ms, std::bind(&sub_joint::timer_callback, this));
     RCLCPP_INFO(this->get_logger(),std::to_string(pdgain[0]).c_str());
     
-
   }
   std::vector<double> applied_torque;
   int start_pub = 0; 

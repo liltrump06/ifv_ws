@@ -23,7 +23,7 @@ def generate_launch_description():
             cmd=['gazebo', '--verbose', world,'-u','-s', 'libgazebo_ros_init.so', 
             '-s', 'libgazebo_ros_factory.so'],
             output='screen')
- 
+    
     #GAZEBO_MODEL_PATH has to be correctly set for Gazebo to be able to find the model
     #spawn_entity = Node(package='gazebo_ros', node_executable='spawn_entity.py',
     #                    arguments=['-entity', 'demo', 'x', 'y', 'z'],

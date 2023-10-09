@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="IFV">
+      <static>false</static>
+      <pose>0 0 0.34 0 0 0</pose>
+
+<!- -----------------------BODY-------------------- ->
+
+      <link name='chassis'>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+        <mass>0.0024</mass>
+        <inertia>
+          <ixx>0.0002</ixx>
+          <iyy>0.00034</iyy>
+          <izz>0.0005</izz>
+        </inertia>
+        </inertial>
+        <collision name='bodyc'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.4668 0.1748 0.076</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>-0.008 0 0.025 0 0 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/body.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+        <sensor type="imu" name="main_imu">
+          <always_on>1</always_on>
+          <update_rate>100</update_rate>
+          <topic>/IFV/imu_topic</topic>
+          <imu>
+            <angular_velocity>
+              <x>
+                <noise type="gaussian">
+                 <mean>0</mean>
+                 <stddev>0.0002</stddev>
+                 <bias_mean>7.5e-06</bias_mean>
+                 <bias_stddev>8e-07</bias_stddev>
+                 <dynamic_bias_stddev>0.01</dynamic_bias_stddev>
+                 <dynamic_bias_correlation_time>10</dynamic_bias_correlation_time>
+                </noise>
+              </x>
+              <y>
+                <noise type="gaussian">
+                 <mean>0</mean>
+                 <stddev>0.0002</stddev>
+                 <bias_mean>7.5e-06</bias_mean>
+                 <bias_stddev>8e-07</bias_stddev>
+                 <dynamic_bias_stddev>0.01</dynamic_bias_stddev>
+                 <dynamic_bias_correlation_time>10</dynamic_bias_correlation_time>
+                </noise>
+              </y>
+              <z>
+                <noise type="gaussian">
+                 <mean>0</mean>
+                 <stddev>0.0002</stddev>
+                 <bias_mean>7.5e-06</bias_mean>
+                 <bias_stddev>8e-07</bias_stddev>
+                 <dynamic_bias_stddev>0.01</dynamic_bias_stddev>
+                 <dynamic_bias_correlation_time>10</dynamic_bias_correlation_time>
+                </noise>
+              </z>
+            </angular_velocity>
+
+            <linear_acceleration>
+              <x>
+                <noise type="gaussian">
+                  <mean>0</mean>
+                  <stddev>0.017</stddev>
+                  <bias_mean>0.1</bias_mean>
+                  <bias_stddev>0.001</bias_stddev>
+                 <dynamic_bias_stddev>0.01</dynamic_bias_stddev>
+                 <dynamic_bias_correlation_time>10</dynamic_bias_correlation_time>
+                </noise>
+              </x>
+              <y>
+                <noise type="gaussian">
+                  <mean>0</mean>
+                  <stddev>0.017</stddev>
+                  <bias_mean>0.1</bias_mean>
+                  <bias_stddev>0.001</bias_stddev>
+                 <dynamic_bias_stddev>0.01</dynamic_bias_stddev>
+                 <dynamic_bias_correlation_time>10</dynamic_bias_correlation_time>
+                </noise>
+              </y>
+              <z>
+                <noise type="gaussian">
+                  <mean>0</mean>
+                  <stddev>0.017</stddev>
+                  <bias_mean>0.1</bias_mean>
+                  <bias_stddev>0.001</bias_stddev>
+                 <dynamic_bias_stddev>0.01</dynamic_bias_stddev>
+                 <dynamic_bias_correlation_time>10</dynamic_bias_correlation_time>
+                </noise>
+              </z>
+            </linear_acceleration>
+          </imu>
+          <plugin name="my_imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+            <ros>
+            <!-- publish to /imu_topic/data -->
+              <namespace>/IFV/imu_topic</namespace>
+              <remapping>~/out:=data</remapping>
+            </ros>
+          </plugin>
+        </sensor>
+
+      </link>
+
+<!- ---------------LF leg----------------- ->
+      <link name="LF_hip">
+        <pose>0.1387 0.1244 0 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.1494 .05 .05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='visual1'>
+        <pose>0.0747 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/hip.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>
+      
+      <link name="LF_thigh">
+        <pose>0.1884 0.1744 -0.085 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.05 .05 .2</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 0.02525 -0.1 -1.57079632679 0 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/thigh.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>   
+      <link name="LF_calf">
+        <pose>0.1884 0.1999 -0.23375 0 0 0</pose>
+        <inertial>
+          <mass>0.0024</mass>
+          <inertia>
+            <ixx>0.00000458</ixx>
+            <iyy>0.00000482</iyy>
+            <izz>0.0000004</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.014 .01 .1725</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 0.0015 0.08625 -1.57079632679 -1.57079632679 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/calf.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+        <collision name='feetc'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <kd>1000000</kd>
+              </ode>
+            </contact> 
+          </surface>
+        </collision>
+        <visual name='feetv'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+        </visual>
+      </link>
+
+<!- --------------------RF leg------------------- ->
+      <link name="RF_hip">
+        <pose>0.1387 -0.1244 0 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.1494 .05 .05</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0.0747 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/hip.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>
+
+      <link name="RF_thigh">
+        <pose>0.1884 -0.1744 -0.085 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.05 .05 .2</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 -0.02525 -0.1 -1.57079632679 0 3.1415926</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/thigh.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>   
+      <link name="RF_calf">
+        <pose>0.1884 -0.1999 -0.23375 0 0 0</pose>
+        <inertial>
+          <mass>0.0024</mass>
+          <inertia>
+            <ixx>0.00000458</ixx>
+            <iyy>0.00000482</iyy>
+            <izz>0.0000004</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.014 .01 .1725</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 0.0015 0.08625 1.57079632679 -1.57079632679 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/calf.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+        <collision name='feetc'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <kd>1000000</kd>
+              </ode>
+            </contact> 
+          </surface>
+        </collision>
+        <visual name='feetv'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+        </visual>
+      </link>
+
+<!- -------------------LH leg-------------------- ->
+      <link name="LH_hip">
+        <pose>-0.1387 0.1244 0 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.1494 .05 .05</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0.0747 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/hip.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>
+
+      <link name="LH_thigh">
+        <pose>-0.1884 0.1744 -0.085 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.05 .05 .2</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 0.02525 -0.1 -1.57079632679 0 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/thigh.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>   
+      <link name="LH_calf">
+        <pose>-0.1884 0.1999 -0.23375 0 0 0</pose>
+        <inertial>
+          <mass>0.0024</mass>
+          <inertia>
+            <ixx>0.00000458</ixx>
+            <iyy>0.00000482</iyy>
+            <izz>0.0000004</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.014 .01 .1725</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 0.0015 0.08625 -1.57079632679 -1.57079632679 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/calf.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+        <collision name='feetc'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <kd>1000000</kd>
+              </ode>
+            </contact> 
+          </surface>
+        </collision>
+        <visual name='feetv'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+        </visual>
+      </link>
+<!- -------------------RH leg-------------------- ->
+      <link name="RH_hip">
+        <pose>-0.1387 -0.1244 0 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.1494 .05 .05</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0.0747 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/hip.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>
+
+      <link name="RH_thigh">
+        <pose>-0.1884 -0.1744 -0.085 0 0 0</pose>
+        <inertial>
+          <mass>0.003</mass>
+          <inertia>
+            <ixx>0.000005725</ixx>
+            <iyy>0.00000625</iyy>
+            <izz>0.000000725</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.05 .05 .2</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 -0.02525 -0.1 -1.57079632679 0 3.1415926</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/thigh.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+      </link>   
+      <link name="RH_calf">
+        <pose>-0.1884 -0.1999 -0.23375 0 0 0</pose>
+        <inertial>
+          <mass>0.0024</mass>
+          <inertia>
+            <ixx>0.00000458</ixx>
+            <iyy>0.00000482</iyy>
+            <izz>0.0000004</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>.014 .01 .1725</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name='visual1'>
+        <pose>0 0.0015 0.08625 1.57079632679 -1.57079632679 0</pose>
+          <geometry>
+            <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/longarmape06/ifv_ws/src/ifv_pkg/world/blender/calf.dae</uri>
+          </mesh>
+          </geometry>
+        </visual>
+        <collision name='feetc'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>100</mu2>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+            </friction>
+            <contact>
+              <ode>
+                <kd>1000000</kd>
+              </ode>
+            </contact> 
+          </surface>
+        </collision>
+        <visual name='feetv'>
+          <pose>0 0 -0.07725 1.57079632679 0 0</pose>
+          <geometry>
+            <sphere>
+                <radius>0.015</radius>
+            </sphere>
+          </geometry>
+        </visual>
+      </link>
+
+<!- ------------------- Joints -------------------- ->
+      <joint type="revolute" name="LF_body2hip">
+        <pose>0.0747 0 0 0 0 0</pose>
+        <child>LF_hip</child>
+        <parent>chassis</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="LF_hip2thigh">
+        <pose>0 0 0.085 0 0 0</pose>
+        <child>LF_thigh</child>
+        <parent>LF_hip</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="LF_thigh2calf">
+        <pose>0 0 0.07425 0 0 0</pose>
+        <child>LF_calf</child>
+        <parent>LF_thigh</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>55</effort> 
+            <lower>2.77507351067</lower>
+            <upper>0.61086523819</upper>
+            <velocity>28.6</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="RF_body2hip">
+        <pose>0.0747 0 0 0 0 0</pose>
+        <child>RF_hip</child>
+        <parent>chassis</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="RF_hip2thigh">
+        <pose>0 0 0.085 0 0 0</pose>
+        <child>RF_thigh</child>
+        <parent>RF_hip</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="RF_thigh2calf">
+        <pose>0 0 0.07425 0 0 0</pose>
+        <child>RF_calf</child>
+        <parent>RF_thigh</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>55</effort> 
+            <lower>2.77507351067</lower>
+            <upper>0.61086523819</upper>
+            <velocity>28.6</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="LH_body2hip">
+        <pose>0.0747 0 0 0 0 0</pose>
+        <child>LH_hip</child>
+        <parent>chassis</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="LH_hip2thigh">
+        <pose>0 0 0.085 0 0 0</pose>
+        <child>LH_thigh</child>
+        <parent>LH_hip</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="LH_thigh2calf">
+        <pose>0 0 0.07425 0 0 0</pose>
+        <child>LH_calf</child>
+        <parent>LH_thigh</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>55</effort> 
+            <lower>2.77507351067</lower>
+            <upper>0.61086523819</upper>
+            <velocity>28.6</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="RH_body2hip">
+        <pose>0.0747 0 0 0 0 0</pose>
+        <child>RH_hip</child>
+        <parent>chassis</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="RH_hip2thigh">
+        <pose>0 0 0.085 0 0 0</pose>
+        <child>RH_thigh</child>
+        <parent>RH_hip</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>20</effort> 
+            <lower>1.0471975512</lower>
+            <upper>0.872664625997</upper>
+            <velocity>52.4</velocity>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint type="revolute" name="RH_thigh2calf">
+        <pose>0 0 0.07425 0 0 0</pose>
+        <child>RH_calf</child>
+        <parent>RH_thigh</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <effort>55</effort> 
+            <lower>2.77507351067</lower>
+            <upper>0.61086523819</upper>
+            <velocity>28.6</velocity>
+          </limit>
+        </axis>
+      </joint>
+      
+      <plugin name="gazebo_ros_joint_state_publisher"
+        filename="libgazebo_ros_joint_state_publisher.so">
+
+      <ros>
+
+        <!-- Add a namespace -->
+        <namespace>/IFV</namespace>
+
+        <!-- Remap the default topic -->
+        <remapping>joint_states:=my_joint_states</remapping>
+
+      </ros>
+
+      <!-- Update rate in Hertz -->
+      <update_rate>1000</update_rate>
+
+      <!-- Name of joints in the model whose states will be published. -->
+      <joint_name>LF_body2hip</joint_name>
+      <joint_name>LF_hip2thigh</joint_name>
+      <joint_name>LF_thigh2calf</joint_name>
+      <joint_name>RF_body2hip</joint_name>
+      <joint_name>RF_hip2thigh</joint_name>
+      <joint_name>RF_thigh2calf</joint_name>
+      <joint_name>LH_body2hip</joint_name>
+      <joint_name>LH_hip2thigh</joint_name>
+      <joint_name>LH_thigh2calf</joint_name>
+      <joint_name>RH_body2hip</joint_name>
+      <joint_name>RH_hip2thigh</joint_name>
+      <joint_name>RH_thigh2calf</joint_name>
+
+      </plugin>
+      <plugin name="applytorque"
+        filename="/home/longarmape06/ifv_ws/build/ifv_simu/libapplytorque.so">
+      </plugin>
+    </model>  
+  </world>
+</sdf>
